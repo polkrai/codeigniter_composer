@@ -1,0 +1,16 @@
+{
+	"description" : "The CodeIgniter Application with Composer",
+	"require": {
+		"php": ">=5.3.2",
+		"codeigniter/framework": "3.1.*",
+		"myth/bay": "dev-develop",
+		"wisembly/elephant.io": "^3.0"
+	},
+	"require-dev": {
+		"mikey179/vfsStream": "1.1.*",
+		"phpunit/phpunit": "^5",
+		"mikey179/vfsStream": "1.1.*",
+		"kenjis/ci-phpunit-test": "^0.17.0",
+		"kenjis/codeigniter-deployer":"1.0.x@dev"
+	}
+}

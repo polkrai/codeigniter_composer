@@ -1,0 +1,60 @@
+➤ Executing task [32mdeploy:prepare[39m
+↳ on [prod]
+PHP Notice:  SSH_AUTH_SOCK not found in /Users/polkrai/Sites/codeigniter_composer/vendor/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php on line 131
+PHP Stack trace:
+PHP   1. {main}() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/bin/dep:0
+PHP   2. Deployer\Deployer->run() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/bin/dep:64
+PHP   3. Symfony\Component\Console\Application->run() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Deployer.php:101
+PHP   4. Symfony\Component\Console\Application->doRun() /Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Application.php:148
+PHP   5. Symfony\Component\Console\Application->doRunCommand() /Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Application.php:255
+PHP   6. Symfony\Component\Console\Command\Command->run() /Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Application.php:960
+PHP   7. Deployer\Console\TaskCommand->execute() /Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Command/Command.php:255
+PHP   8. Deployer\Executor\SeriesExecutor->run() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Console/TaskCommand.php:82
+PHP   9. Deployer\Task\Task->run() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Executor/SeriesExecutor.php:43
+PHP  10. call_user_func:{/Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Task/Task.php:79}() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Task/Task.php:79
+PHP  11. {closure:/Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/recipe/common.php:104-142}() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Task/Task.php:79
+PHP  12. Deployer\Server\Remote\PhpSecLib->connect() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/recipe/common.php:105
+PHP  13. phpseclib\System\SSH\Agent->__construct() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Server/Remote/PhpSecLib.php:78
+PHP  14. user_error() /Users/polkrai/Sites/codeigniter_composer/vendor/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php:131
+
+Notice: SSH_AUTH_SOCK not found in /Users/polkrai/Sites/codeigniter_composer/vendor/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php on line 131
+
+Call Stack:
+    0.0004     244864   1. {main}() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/bin/dep:0
+    0.0309    2526296   2. Deployer\Deployer->run() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/bin/dep:64
+    0.0419    3167392   3. Symfony\Component\Console\Application->run() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Deployer.php:101
+    0.0594    3179944   4. Symfony\Component\Console\Application->doRun() /Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Application.php:148
+    0.0604    3184176   5. Symfony\Component\Console\Application->doRunCommand() /Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Application.php:255
+    0.0605    3184784   6. Symfony\Component\Console\Command\Command->run() /Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Application.php:960
+    0.0613    3189072   7. Deployer\Console\TaskCommand->execute() /Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Command/Command.php:255
+    0.0628    3210400   8. Deployer\Executor\SeriesExecutor->run() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Console/TaskCommand.php:82
+    0.0641    3263176   9. Deployer\Task\Task->run() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Executor/SeriesExecutor.php:43
+    0.0642    3263544  10. call_user_func:{/Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Task/Task.php:79}() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Task/Task.php:79
+    0.0642    3263776  11. {closure:/Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/recipe/common.php:104-142}() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Task/Task.php:79
+    0.0643    3264520  12. Deployer\Server\Remote\PhpSecLib->connect() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/recipe/common.php:105
+    0.0800    5008696  13. phpseclib\System\SSH\Agent->__construct() /Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Server/Remote/PhpSecLib.php:78
+    0.0800    5008880  14. user_error() /Users/polkrai/Sites/codeigniter_composer/vendor/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php:131
+
+
+[33mIn PhpSecLib.php line 99:[39m
+[37;41m                                                  [39;49m
+[37;41m  [RuntimeException]                              [39;49m
+[37;41m  Unable to login with the provided credentials.  [39;49m
+[37;41m                                                  [39;49m
+
+[33mException trace:[39m
+ () at [32m/Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Server/Remote/PhpSecLib.php:99[39m
+ Deployer\Server\Remote\PhpSecLib->connect() at [32m/Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/recipe/common.php:105[39m
+ {closure}() at [32mn/a:n/a[39m
+ call_user_func() at [32m/Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Task/Task.php:79[39m
+ Deployer\Task\Task->run() at [32m/Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Executor/SeriesExecutor.php:43[39m
+ Deployer\Executor\SeriesExecutor->run() at [32m/Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Console/TaskCommand.php:82[39m
+ Deployer\Console\TaskCommand->execute() at [32m/Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Command/Command.php:255[39m
+ Symfony\Component\Console\Command\Command->run() at [32m/Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Application.php:960[39m
+ Symfony\Component\Console\Application->doRunCommand() at [32m/Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Application.php:255[39m
+ Symfony\Component\Console\Application->doRun() at [32m/Users/polkrai/Sites/codeigniter_composer/vendor/symfony/console/Application.php:148[39m
+ Symfony\Component\Console\Application->run() at [32m/Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/src/Deployer.php:101[39m
+ Deployer\Deployer->run() at [32m/Users/polkrai/Sites/codeigniter_composer/vendor/deployer/deployer/bin/dep:64[39m
+
+[32mdeploy [-p|--parallel][39m
+
